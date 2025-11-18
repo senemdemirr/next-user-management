@@ -1,12 +1,14 @@
 [
   {
     "id": 1,
+    "name": "Senem Demir",
     "email": "senem@example.com",
-    "role": "admin"
+    "password": "Deneme.1"
   },
   {
     "id": 2,
+    "name": "Test User",
     "email": "test@example.com",
-    "role": "user"
+    "password": "Deneme.2"
   }
 ]
