@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "senem demir",
+    "email": "senemdemir262@gmail.com",
+    "passwordHash": "$2b$10$5xjwOO1PZLffXd92ZDzGaeRPmAmNmJKUQIztSV09/N8NMwA5aTwuW"
+  }
+]
