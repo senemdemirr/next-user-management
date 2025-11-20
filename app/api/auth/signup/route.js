@@ -15,6 +15,8 @@ export async function POST(req) {
             )
         }
 
+        const {name, email, password} = parsed.data;
+
         const user = await createUser({ name, email, password });
         const token = signToken({ id: user.id, email: user.email });
 
