@@ -4,5 +4,11 @@
     "name": "senem demir",
     "email": "senemdemir262@gmail.com",
     "passwordHash": "$2b$10$5xjwOO1PZLffXd92ZDzGaeRPmAmNmJKUQIztSV09/N8NMwA5aTwuW"
+  },
+  {
+    "id": 2,
+    "name": "hilal turhan",
+    "email": "hilalturhan@gmail.com",
+    "passwordHash": "$2b$10$x9kAHLVh5ACPUBNrU46BQ.1sV/gi.ofRrkegWqAwlFzOTXvF2o46a"
   }
 ]
