@@ -10,5 +10,11 @@
     "name": "hilal turhan",
     "email": "hilalturhan@gmail.com",
     "passwordHash": "$2b$10$x9kAHLVh5ACPUBNrU46BQ.1sV/gi.ofRrkegWqAwlFzOTXvF2o46a"
+  },
+  {
+    "id": 3,
+    "name": "test example",
+    "email": "test@example.com",
+    "passwordHash": "$2b$10$mCJ.cGYpAaaz9wQbwOyZLO.sguCZyTxTKwz/os3Fove808Un20X02"
   }
 ]
