@@ -20,7 +20,7 @@ export default function Login() {
         });
 
         const data = await res.json();
-        console.log("data", data);
+        
         if (!data.success) {
             setError(data.message);
             return;
