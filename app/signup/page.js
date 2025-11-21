@@ -1,8 +1,10 @@
 "use client"
 import { Card, CardContent, TextField, Typography, Button, Alert } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Signup() {
+    const router = useRouter();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,8 +20,8 @@ export default function Signup() {
                 body: JSON.stringify({ name, email, password })
             });
 
-            const data = res.json();
-            console.log("data", data);
+            const data = await res.json();
+
             if (!data.success) {
                 setError(data.message);
                 return;
@@ -27,6 +29,8 @@ export default function Signup() {
 
             localStorage.setItem("auth_token", data.token);
             localStorage.setItem("auth_user", JSON.stringify(data.user));
+
+            router.push("/login");
 
         } catch (error) {
             console.log(error);
