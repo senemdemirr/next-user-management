@@ -16,5 +16,11 @@
     "name": "test example",
     "email": "test@example.com",
     "passwordHash": "$2b$10$mCJ.cGYpAaaz9wQbwOyZLO.sguCZyTxTKwz/os3Fove808Un20X02"
+  },
+  {
+    "id": 4,
+    "name": "test",
+    "email": "test2@example.com",
+    "passwordHash": "$2b$10$rgJWhwmM3LudOyr0TRviTOtE8G1wsK48p0mVhcQJ2UYM/AM81ETnC"
   }
 ]
