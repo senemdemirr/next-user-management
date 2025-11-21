@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/data/users.json
 /.pnp
 .pnp.*
 .yarn/*
