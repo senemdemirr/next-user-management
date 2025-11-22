@@ -22,7 +22,7 @@ export default function Login() {
         const data = await res.json();
         
         if (!data.success) {
-            setError(data.message);
+            setError(data.error);
             return;
         }
 

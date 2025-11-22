@@ -23,7 +23,7 @@ export default function Signup() {
             const data = await res.json();
 
             if (!data.success) {
-                setError(data.message);
+                setError(data.error);
                 return;
             }
 
@@ -31,7 +31,6 @@ export default function Signup() {
             router.push("/login");
 
         } catch (error) {
-            console.log(error);
             setError(error);
         }
 
