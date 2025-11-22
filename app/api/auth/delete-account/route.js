@@ -23,17 +23,7 @@ export async function DELETE(req) {
             )
         }
 
-        const body = await req.json();
-        const parsed = DeleteAccountSchema.safeParse(body);
-
-        if(!parsed.success){
-            return NextResponse.json(
-                {success: false, error: parsed.error.issues[0].message},
-                {status: 400}
-            )
-        }
-
-        await deleteUser({userId: payload.id, password: parsed.data.password});
+        await deleteUser({userId: payload.id});
 
         return NextResponse.json(
             {success: true, message: "Account deleted"},
