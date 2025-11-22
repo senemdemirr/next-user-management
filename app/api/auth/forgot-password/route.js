@@ -1,28 +1,9 @@
 import { NextResponse } from "next/server";
 import { PasswordUpdateSchema } from "@/lib/definitions";
 import { updateUserPassword } from "@/lib/userStoreFs";
-import { verifyToken } from "@/lib/jwt";
 
 export async function PATCH(req) {
     try {
-        const auth = req.headers.get("authorization");
-        if (!auth) {
-            return NextResponse.json(
-                { success: false, error: "Unauthorizated" },
-                { status: 401 }
-            )
-        }
-
-        const token = auth.split(" ")[1];
-        const payload = verifyToken(token);
-
-        if (!payload) {
-            return NextResponse.json(
-                { success: false, error: "Invalid token" },
-                { status: 401 }
-            )
-        }
-
         const body = await req.json();
         const parsed = PasswordUpdateSchema.safeParse(body);
 
@@ -32,10 +13,8 @@ export async function PATCH(req) {
                 { status: 400 }
             )
         }
-
         const user = await updateUserPassword({
-            userId: payload.id,
-            oldPassword: parsed.data.oldPassword,
+            email: parsed.data.email,
             newPassword: parsed.data.newPassword
         })
 
