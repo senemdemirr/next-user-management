@@ -22,10 +22,8 @@ export default function ForgotPassword() {
         });
 
         const data = await res.json();
-        console.log("DATAAAA", data);
 
         if (!data.success) {
-            console.log("data.message", data.error);
             setError(data.error);
             return;
         }
