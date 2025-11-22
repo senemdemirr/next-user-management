@@ -1,5 +1,6 @@
 "use client"
 import { Card, CardContent, TextField, Typography, Button, Alert } from "@mui/material";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -71,6 +72,7 @@ export default function Signup() {
                         <Button fullWidth type="submit" variant="contained" className="!mt-4"> Sign up </Button>
                     </form>
                 </CardContent>
+                <Typography className="text-center mt-6">Back to <Link href={"/login"} className="font-normal hover:underline underline-offset-1 hover:text-[#1976D2]">Login</Link></Typography>
             </Card>
         </div>
     )
