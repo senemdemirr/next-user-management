@@ -29,7 +29,7 @@ export async function POST(req) {
         return NextResponse.json(
             {
                 success: true,
-                user: { id: user.id, name: user.name, email: user.email },
+                user: { name: user.name},
                 token
             },
             { status: 200 }
